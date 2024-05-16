@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>AutoWorld - Pagina di Registrazione</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sign-in.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="./rememberMe.js" type="application/javascript"></script>
+    <style> 
+        body {
+            background-image: url(../immagini/sfondologin.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Formula1 Display';
+            color: orange;
+        }
+        h1 {
+            font-size: x-large;
+        }
+        td:nth-child(1) {
+            width: 350px;
+            border-right: 1px solid black;
+            height: auto;
+        }
+        td:nth-child(1):hover {
+            background-color: white;
+        }
+        tr:first-child td:first-child {
+            border-top-left-radius: 30px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        tr:nth-child(3) td:first-child {
+            border-bottom-left-radius: 30px;
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+        }
+        h2 {
+            margin-top: 20px;
+            font-size: xx-large;
+            margin-bottom: 200px;
+        }
+        table {
+            background-color: orange;
+            color: black;
+            border-radius: 30px;
+            margin: auto;
+            width: 80%;
+            height: 400px;
+        }
+        a {
+            text-decoration: none; /* Rimuove la sottolineatura */
+            color: black; /* Cambia il colore del testo */
+        }
+        .logo-container a {
+            color: orange; /* Cambia il colore del testo all'interno dell'ancora */
+        }
+    </style>
+</head>
+<body class="text-center">
+    <div class="logo-container">
+        <h2><a href="../index.php">AUTOWORLD</a></h2>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <h1><a href="../login/index.html">LOGIN</a></h1>
+            </td>
+            <td rowspan="3"> 
+                <h1>Registrazione</h1>
+                <form action="registrazione.php" class="form-signin m-auto" method="POST" name="myForm" onSubmit="return validForm()">
+                    <input type="email" name="inputEmail" class="form-control" placeholder="Indirizzo e-mail" required autofocus />
+                    <input type="password" name="inputPassword" class="form-control" placeholder="Password" required />
+                    <input type="password" name="inputConfermaPassword" class="form-control" placeholder="Conferma Password" required />
+                    <input type="text" name="inputName" class="form-control" placeholder="Nome" autofocus />
+                    <input type="text" name="inputSurname" class="form-control" placeholder="Cognome" autofocus />
+                    <div id="divRemember" class="checkbox mb-3">
+                        <input id="rmb" type="checkbox" name="remember" />
+                        <label for="rmb">Ricordami</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Invia!</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1><a href="index.html">REGISTRATI</a></h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1><a href="../forgot-psw/forgot-password.php">Password dimenticata</a></h1>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
