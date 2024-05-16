@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    background-image: url(immagini/auto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Impedisce la ripetizione dello sfondo */
+    background-attachment: fixed;
+}
+@font-face {
+    font-family: 'Formula1 Display';
+    src: url('C:\Windows\Fonts\Formula1-Display.ttf') format('truetype'); /* Imposta il percorso al file del font */
+}
+nav {
+    position: fixed; /* Rende la navbar fissa */
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: #ffa500;
+    font-family: 'Formula1 Display';
+    
+}
+nav ul {
+    width: 90%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li {
+    height: 70px;
+    padding: 0 40px;
+}
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    /*font-size: 16px; /* Adjust the value to your desired font size */
+}
+nav li:not(:first-child) {
+    font-size: 18px; /* Adjust the value to your desired font size */
+}
+nav li:first-child {
+    margin-right: auto;
+    font-size: xx-large;
+    background-color: orange;
+}
+nav li:last-child {
+    background-color: orange;
+    justify-content: flex-end;
+    margin-left: -30px;
+    margin-right: -90px;
+}
+nav li:nth-child(-n+5) {
+    position: sticky;
+    z-index: 1;
+    margin-right: auto;
+    justify-content: flex-end;
+    background-color: orange;
+}
+nav li:not(:first-child):hover {
+    background-color: white;
+    transform: scale(1.15);
+}
+
+.dropbtn {
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: auto; /* Imposta la larghezza del menu a tendina */
+    right: 0; /* Allinea il menu a tendina verso destra */
+    left: 0; /* Resetta la posizione sinistra */
+    z-index: 10000;
+  }
+  
+  .dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: orange; /* Cambia il colore del testo delle opzioni del dropdown menu quando passi sopra */
+}
+
+  
+
+  .dropdown:hover .dropdown-menu {display: block;}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+.icon-auto-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.icon-auto-button img {
+    transition: transform 0.3s ease-in-out;
+}
+.icon-auto-button:hover img {
+    transform: scale(1.15);
+}
+.container {
+    border-radius: 30px;
+    margin-top: 100px;
+    text-align: center; /* Allinea il contenuto al centro */
+    background-color: #2c2c2c96;
+    margin-left: 600px;
+    margin-right: 600px;
+    font-family: 'Formula1 Display';
+    color: orange;
+}
+.container2 {
+    border-radius: 30px;
+    margin-top: 150px;
+    background-color: #2c2c2c96;
+    margin-left: 500px;
+    margin-right: 500px;
+    font-family: 'Formula1 Display';
+    color: orange;
+}
+.container3 {
+    border-radius: 10px;
+    background-color: #2c2c2c96;
+    font-family: 'Formula1 Display';
+    color: orange;
+    margin-right: 100px;
+}
+.row {
+    display: flex;
+    overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+    overflow-y: hidden;
+    flex-wrap: nowrap; /* Impedisce il wrapping dei contenuti */
+}
+.col {
+    flex: 0 0 auto;
+    width: 30%;
+    margin: 10px;
+}
+.content {
+    display: inline-block; /* Imposta il contenuto come blocco inline */
+    margin-top: 20px; /* Spazio sopra i riquadri */
+}
+.box {
+    display: inline-block; /* Imposta i riquadri come blocchi inline */
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.container-contattaci{
+    background-color: orange;
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: 70px;
+}
+
+
+.car-logos-container {
+    position: fixed;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: hidden; /* Nascondi lo scorrimento verticale */
+    white-space: nowrap;
+    background-color: black;
+    height: 70px;
+    bottom: 0;
+    width: 100%;
+}
+.car-logos {
+    width: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    background-color: transparent;
+}
+.animation {
+    animation: slide 40s linear infinite;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.car-logos img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+.form-signin input[type="text"],
+.form-signin input[type="number"],
+.form-signin input[type="email"],
+.form-signin input[type="password"],
+.form-signin textarea,
+.form-signin select, 
+.form-signin button[type="submit"],
+.form-signin button[type="reset"] {
+    border-radius: 10px; /* Imposta il raggio dell'arrotondamento del bordo */
+    padding: 10px; /* Aggiungi spazio intorno al contenuto */
+    margin-bottom: 10px; /* Aggiungi spazio tra le caselle */
+    border: 1px solid #ccc; /* Aggiungi un bordo */
+    margin-left: 30px;
+}
+.annunci-container {
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden; /* Nascondi lo scorrimento verticale */
+    white-space: nowrap;
+    background-color: black;
+}
+.scroll-big-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 170px;
+    margin-bottom: 300px;
+}
+.scroll-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #2c2c2c96;
+}
+
+.scroll-content {
+    display: flex;
+    white-space: nowrap; /* Fai sì che il contenuto non vada a capo */
+    margin: 20px;
+    margin-left: 50px;
+    
+
+}
+
+
+.ad {
+    display: flex; /* Utilizza flexbox per allineare l'immagine e il testo */
+    align-items: center; /* Allinea verticalmente il contenuto */
+    gap: 80px; /* Aggiungi spazio tra l'immagine e il testo */
+    background-color: #333; /* Colore di sfondo per migliorare la leggibilità del testo */
+    padding: 0px; /* Aggiungi padding */
+    margin-right: 30px;
+}
+
+.ad img {
+    max-width: auto; /* Imposta la larghezza massima dell'immagine */
+    height: auto;
+}
+
+.ad .text {
+    flex: 1; /* Fai sì che il testo occupi tutto lo spazio rimanente */
+}
+
+.ad h2, .ad p {
+    background-color: black; /* Colore di sfondo per migliorare la leggibilità del testo */
+    color: white; /* Colore del testo */
+    font-family: 'Formula1 Display';
+    margin: auto; /* Rimuovi il margine interno */
+    
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1; 
+}
+.scroll-button.scroll-left img,
+.scroll-button.scroll-right img {
+    width: 80px; /* Imposta la larghezza desiderata dell'immagine */
+    height: 80px; /* Imposta l'altezza automaticamente per mantenere le proporzioni */
+    /* Aggiungi altre proprietà CSS per personalizzare l'aspetto dell'immagine */
+}
+.scroll-left {
+    left: 0;
+}
+.scroll-right {
+    right: 0;
+}
+/* CSS */
+.heart-icon {
+    display: inline-block;
+    width: 24px; /* Regola la dimensione dell'icona */
+    height: 24px;
+    background-image: url('immagini/cuore-vuoto.png'); /* Immagine del cuore vuoto */
+    background-size: cover;
+}
+
+.heart-icon.filled {
+    background-image: url('immagini/cuore-pieno.png'); /* Immagine del cuore pieno */
+}
+
+
+
